@@ -2,21 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { useInView } from "react-intersection-observer"
-import {
-  ChevronDown,
-  Play,
-  Wand2,
-  FileText,
-  Sparkles,
-  Edit,
-  Clock,
-  CheckCircle,
-  Bold,
-  Italic,
-  AlignLeft,
-  List,
-  Save,
-} from "lucide-react"
+import { ChevronDown, Play, Wand2, FileText, Sparkles, Edit, Bold, Italic, AlignLeft, List, Save } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -56,6 +42,14 @@ function Intro() {
       <div className="relative mx-auto max-w-7xl px-6 md:px-12">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
           <div className="flex flex-col justify-center">
+            <Link
+              href="#"
+              className="text-2xl font-bold mb-4 hover:text-blue-400 transition-colors cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VideoFirm
+            </Link>
             <h1 className="text-5xl font-black text-white md:text-6xl lg:text-7xl">
               AI-Powered <span className="text-blue-500">Document</span> Enhancement
             </h1>
@@ -1319,46 +1313,7 @@ function EditingFeatures() {
               <p className="mb-2">
                 Our solution provides a comprehensive suite of digital tools that are easy to use and affordable. We
                 help small businesses establish an effective online presence without requiring extensive technical
-                knowledge.
               </p>
-              <p>
-                The benefits of our approach include cost savings, increased efficiency, and improved customer
-                engagement. Our clients typically see a 30% increase in online inquiries within the first three months.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-3 gap-2 mb-4">
-              <button className="bg-gray-800 text-white p-2 rounded-md text-sm flex items-center justify-center">
-                <Sparkles className="h-4 w-4 mr-1" /> Enhance
-              </button>
-              <button className="bg-gray-800 text-white p-2 rounded-md text-sm flex items-center justify-center">
-                <Edit className="h-4 w-4 mr-1" /> Rewrite
-              </button>
-              <button className="bg-gray-800 text-white p-2 rounded-md text-sm flex items-center justify-center">
-                <FileText className="h-4 w-4 mr-1" /> Summarize
-              </button>
-            </div>
-
-            <div className="bg-gray-900 p-3 rounded-md">
-              <div className="text-white text-sm mb-2">AI Enhancement Suggestions</div>
-              <div className="space-y-2 text-xs">
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="h-4 w-4 mr-2" />
-                  Improved sentence structure for better readability
-                </div>
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="h-4 w-4 mr-2" />
-                  Enhanced vocabulary with more impactful word choices
-                </div>
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="h-4 w-4 mr-2" />
-                  Added specific metrics to strengthen your claims
-                </div>
-                <div className="flex items-center text-blue-400">
-                  <Clock className="h-4 w-4 mr-2" />
-                  Suggested adding a clear call-to-action in the final paragraph
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1371,114 +1326,20 @@ function CollaborationFeatures() {
   return (
     <section>
       <JumboText>
-        <h2>
-          Real-time collaboration <span className="text-yellow-500">makes teamwork effortless.</span>
-        </h2>
+        Real-time collaboration <span className="text-purple-500">makes teamwork a breeze.</span>
       </JumboText>
-      <div className="h-[10vh]" />
-
-      <JumboP>Share your documents with team members for seamless collaboration.</JumboP>
-      <JumboP>Everyone can edit simultaneously with changes synced in real-time.</JumboP>
-      <JumboP>Track revisions, add comments, and approve changes with a simple workflow.</JumboP>
-      <JumboP>
-        Set permissions once, and every document will maintain your security standards without the hassle.
-      </JumboP>
-
-      <div className="sticky bottom-[-5vh]">
-        <BrowserChrome url="videofirm.com/collaboration/12345">
-          <div className="h-[42vh] sm:h-[55vh] bg-white text-black">
-            <div className="flex h-full">
-              <div className="w-1/5 border-r border-gray-200 p-4">
-                <div className="font-medium">Collaboration</div>
-                <div className="pl-4 mt-2 text-gray-600">
-                  <div>Team Members</div>
-                  <div>Comments</div>
-                  <div>Revisions</div>
-                  <div>Permissions</div>
-                </div>
-              </div>
-
-              <div className="w-4/5 p-4">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="font-bold text-lg">Business Proposal - Collaboration</h3>
-                  <div className="flex items-center">
-                    <div className="flex -space-x-2 mr-2">
-                      <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs">
-                        JS
-                      </div>
-                      <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white text-xs">
-                        AK
-                      </div>
-                      <div className="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white text-xs">
-                        TM
-                      </div>
-                    </div>
-                    <button className="bg-blue-500 text-white px-3 py-1 rounded text-sm">Share</button>
-                  </div>
-                </div>
-
-                <div className="border border-gray-200 rounded-md p-4 mb-4 min-h-[200px]">
-                  <p className="mb-2">
-                    The digital transformation of small businesses has become{" "}
-                    <span className="bg-yellow-100">increasingly important</span> in today's competitive landscape. Many
-                    small business owners struggle with limited resources and technical expertise.
-                  </p>
-                  <p className="mb-2">
-                    Our solution provides a comprehensive suite of digital tools that are easy to use and affordable. We
-                    help small businesses establish an effective online presence without requiring extensive technical
-                    knowledge.
-                  </p>
-                  <p>
-                    The benefits of our approach include cost savings, increased efficiency, and improved customer
-                    engagement. Our clients typically see a{" "}
-                    <span className="bg-green-100">30% increase in online inquiries</span> within the first three
-                    months.
-                  </p>
-                </div>
-
-                <div className="border border-gray-200 rounded-md p-3 mb-4">
-                  <div className="font-medium mb-2">Comments</div>
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-2">
-                      <div className="w-8 h-8 rounded-full bg-blue-500 flex-shrink-0 flex items-center justify-center text-white text-xs">
-                        JS
-                      </div>
-                      <div>
-                        <div className="bg-gray-100 p-2 rounded-md">
-                          <p className="text-sm">
-                            I think we should emphasize the ROI more clearly in the third paragraph.
-                          </p>
-                        </div>
-                        <div className="text-xs text-gray-500 mt-1">John Smith, 10 minutes ago</div>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-8 h-8 rounded-full bg-green-500 flex-shrink-0 flex items-center justify-center text-white text-xs">
-                        AK
-                      </div>
-                      <div>
-                        <div className="bg-gray-100 p-2 rounded-md">
-                          <p className="text-sm">
-                            Good point. I've highlighted the 30% metric, but we could add more specific ROI examples.
-                          </p>
-                        </div>
-                        <div className="text-xs text-gray-500 mt-1">Anna Kim, 5 minutes ago</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-3 flex gap-2">
-                    <input
-                      type="text"
-                      className="flex-1 border border-gray-300 rounded p-2 text-sm"
-                      placeholder="Add a comment..."
-                    />
-                    <button className="bg-blue-500 text-white px-3 py-1 rounded text-sm">Send</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </BrowserChrome>
+      <div className="h-[25vh]" />
+      <JumboP>Share documents with your team and work together in real-time.</JumboP>
+      <JumboP>Track changes, leave comments, and get feedback instantly.</JumboP>
+      <JumboP>No more emailing documents back and forth.</JumboP>
+      <div className="h-[25vh]" />
+      <div className="mx-auto max-w-5xl p-6 md:p-10">
+        <div className="mb-8 text-4xl font-black text-white sm:text-5xl md:text-6xl">
+          <h2 className="inline">Collaboration Features</h2>
+        </div>
+        <p className="mt-2 text-lg md:pr-52 md:text-xl lg:pr-72">
+          VideoFirm makes it easy to collaborate with your team on documents.
+        </p>
       </div>
     </section>
   )
@@ -1486,15 +1347,21 @@ function CollaborationFeatures() {
 
 function CTA() {
   return (
-    <>
-      <JumboText>That's probably enough for now. Ready to enhance your documents with AI?</JumboText>
-      <div className="mx-auto max-w-6xl px-6 md:px-12">
-        <div className="h-4" />
-        <Button asChild size="lg" className="text-lg">
-          <Link href="/register">Get Started</Link>
-        </Button>
+    <section className="bg-gradient-to-b from-[#1d1d1d] to-[#121212] py-20 md:py-32">
+      <div className="mx-auto max-w-7xl px-6 md:px-12 text-center">
+        <h2 className="text-4xl font-black text-white md:text-5xl lg:text-6xl">Ready to transform your writing?</h2>
+        <p className="mt-6 text-xl text-gray-300">
+          Get started with VideoFirm today and experience the power of AI-powered document enhancement.
+        </p>
+        <div className="mt-10 flex justify-center">
+          <Link
+            href="/register"
+            className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-lg font-medium text-white shadow-lg transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          >
+            Get Started
+          </Link>
+        </div>
       </div>
-      <div className="h-[25vh]" />
-    </>
+    </section>
   )
 }
